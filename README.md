@@ -23,7 +23,7 @@ that the port is accepted by your AS).
 **Install in your app directory**
 
 ```shell
-$ cd cwx-auth-helper
+$ cd cwx-oauth2-helper
 $ npm install
 ```
 
