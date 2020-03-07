@@ -1,0 +1,23 @@
+{
+  "name": "cwx-oauth2-helper",
+  "version": "0.2.0",
+  "description": "Simple OAuth2 Authorization Code grant helper for CaseWorx",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grzegorz.balnis@wolterskluwer.com",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cwx-de/cwx-oauth2-helper.git"
+  },
+  "dependencies": {
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "hashmap": "^2.4.0",
+    "js-yaml": "^3.13.1",
+    "open": "^7.0.2",
+    "request": "^2.88.0"
+  }
+}
