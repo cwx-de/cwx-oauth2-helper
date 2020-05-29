@@ -4,12 +4,14 @@ environments:
     -   id: stg
         name: Authorization Server (Staging)
         authorizationUrl: replace_with_your_authorization_endpoint_url
+        scope: openid profile
         tokenUrl: replace_with_your_token_endpoint_url
         clientId: replace_with_your_client_ID
         clientSecret: replace_with_your_client_secret
     -   id: prd
         name: Authorization Server (Production)
         authorizationUrl: replace_with_your_authorization_endpoint_url
+        scope: openid profile
         tokenUrl: replace_with_your_token_endpoint_url
         clientId: replace_with_your_client_ID
         clientSecret: replace_with_your_client_secret
