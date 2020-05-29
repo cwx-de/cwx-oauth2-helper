@@ -85,6 +85,7 @@ $ NODE_CONFIG_DIR='/your/directory/of/choice' node app.js
 	- `id` unique environment identifier
 	- `name` a human-readable environment name
 	- `authorizationUrl` OAuth2 authorization url
+	- `scope` a list of OAuth2/OIDC scopes
     - `tokenUrl` OAuth2 token url
     - `clientId` OAuth2 client ID
     - `clientSecret` OAuth2 client secret

@@ -30,6 +30,8 @@ app.get('/', (req, res) => {
 		url.searchParams.append('client_id', env.clientId);
 		url.searchParams.append('redirect_uri', callbackUrl);
 		url.searchParams.append('state', state);
+		if(env.scope)
+			url.searchParams.append('scope', env.scope);
 		show += `<li><a href="${url.href}">${env.name}</a></li>`;
 	});
 	show += '</ul>';
@@ -96,8 +98,10 @@ function getTokens(env, code, cb) {
 			error = { message: `Token endpoint says: ${r.statusCode} ${r.statusMessage}<br>${r.body}` };
 		} else {
 			let b = JSON.parse(body);
+			console.log(b);
 			console.log('tokens received:');
 			console.log(`access_token=${b.access_token}`);
+			console.log(`id_token=${b.id_token}`);
 			console.log(`refresh_token=${b.refresh_token}`);
 			tokens = b;
 		}
@@ -119,6 +123,8 @@ function formatTokens(header, err, tokens) {
 		show += err.message;
 	} else {
 		show += '<table style="width:75%"><tbody>'
+			+ '<tr><td><p>id_token:</p></td></tr>'
+			+ `<tr><td><p style="font-family:monospace">${tokens.id_token}</p></td></tr>`
 			+ '<tr><td><p>access_token:</p></td></tr>'
 			+ `<tr><td><p style="font-family:monospace">${tokens.access_token}</p></td></tr>`
 			+ '<tr><td><p>refresh_token:</p></td></tr>'
