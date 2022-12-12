@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "config": "^3.2.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "hashmap": "^2.4.0",
     "js-yaml": "^3.13.1",
     "open": "^7.0.2",
